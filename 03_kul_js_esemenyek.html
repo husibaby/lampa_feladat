@@ -7,11 +7,20 @@
     <script src="03_main.js"></script>
 
 </head>
-<body>
+<body onload="alert('Betöltődött az oldal!')"> 
     <main>
-        <button onclick="console.log('rákattintott')">Kattints ide!</button>
+        <button onclick="uzenetPirosra">Kattints ide!</button>
         <h2>Vidd ra az egeret a villanykörtére</h2>
-        <img id="villanykörte" src="img/pic_bulboff.gif" alt="villanykörte" onmouseenter="villanykörteFelkapcsolása()" onmouseleave="villanykörteLekapcsolása()">
+        <img id="villanykörte" src="img/pic_bulboff.gif" alt="villanykörte"         onmouseenter="villanykörteFelkapcsolása()" onmouseleave="villanykörteLekapcsolása()">
+        <br>
+        <input id="beviteli mező" type="text" placeholder="Írj be valamit"
+            onfocus="beviteliFocus()"
+            onblur="bevitelBlur()"
+            oninput="bevitelInput()"
+            onload="console.log('Betöltődött a kép!')">
+
+        <p id="üzenet"></p>
+
     </main>
     
 </body>
